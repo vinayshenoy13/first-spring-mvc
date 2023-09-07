@@ -1,9 +1,9 @@
 # first-spring-mvc
 
 <br>
-<h1>author_name - vinay shenoy</h1>
+<h3>author_name - vinay shenoy</h3>
 <br>
-<h1>Spring MVC</h1>
+<h3>Spring MVC</h3>
 <br>
 <h3>Abstract</h3>
 <br>
