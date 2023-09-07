@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:include="base.html :: header_fragment">
+</head>
+<body>
+	<div th:replace="base.html :: navbar_code"></div>
+
+	<div class="container text-center">
+		<table class="table mt-3 table-hover table-bordered border-danger">
+			<thead  class="table table-primary">
+				<tr class="h4">
+					<th>ID</th>
+					<th>NAME</th>
+					<th>SALARY</th>
+					<th colspan="2">ACTION</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="h5" th:each="user: ${allUsers}">
+					<td th:text="${user.id}" />
+					<td th:text="${user.name}" />
+					<td th:text="${user.salary}" />
+					<td><a class="btn btn-warning" th:href="@{/users/update-user/{id}(id=${user.id})}">Edit</a></td>
+					<td><a class="btn btn-danger" th:href="@{/users/delete-user/{id}(id=${user.id})}">Delete</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script th:replace="base.html :: bootstrap_js"></script>
+</body>
+</html>
